@@ -1,0 +1,30 @@
+﻿Grid:
+    
+    • display:grid = for declare a class as a grid system
+         
+    • grid-template-colums/rows = for create a columns or rows  
+					    	define a value with px,rem,fr,etc.
+
+    • gird-template-raws/column = repeat(number of times,width)
+                                        for set multiple raws and columns
+
+    • gird-gap = for set a gap around columns 
+                define a value with px,rem,etc
+
+    • grid-column-gap = for create gap between columns
+
+    • grid-row-gap = for create gap between rows
+
+    • grid-column-start/end = for span a multiple columns
+
+    • grid-rows-start/end = for span a multiple rows
+
+    • grid-column/row: 1/span 3
+                  1 = index number of columns or rows
+                  3 = number of columns or rows you want to span  
+                                
+    • grid-template-colums/row:repeat(auto-fit,minmax(minimum value,maximum value )
+                              for make responsive webside
+                              this code declare in parent class  
+                             
+    •grid-template-area: for this watch the video in youtube.....

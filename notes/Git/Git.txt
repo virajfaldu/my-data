@@ -1,0 +1,37 @@
+ 
+
+    git config --user.name "your_name" : for creating a your username
+ 
+    git config --user.email "your_email-id" : for creating a your email-Id
+
+    git config user.name : for see your username 
+
+    git config user.email  : for see your email Id
+
+    git config --list : for see list of [i don't know :)]
+    
+    git status : for track your files,if you made a git files
+
+    git init : for create a git hidden files and initioal 
+    
+    git add --a : for add all your local files to git files
+
+    git add file_name : for add one single file to git files
+    
+    git commit -m "message" : for write a message for snapshot
+
+    git commit -a -m "message" : user for ignore staging area and send direct to commit area
+
+    git log : for see what and who changed the data of files
+
+    rm -rf .git : for delete your git file and end of tracking your folder by git
+
+    git diff : use for compare working area files and staging area files 
+    
+    git diff --staged : use for compare current staged area files with previous staged files 
+
+    touch .gitignore : this is for create a .gitignore files,.gitignore files use for ignore files by git 
+
+     
+
+

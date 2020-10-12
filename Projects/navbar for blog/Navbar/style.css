@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* color: white; */
+}
+
+html{
+    font-size: 65.5%;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar{
+    width: 100vw;
+    height: 6rem;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo h1{
+    /* padding-right: 3rem; */
+}
+
+.navbar .logo h1{
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* .navbar ul.links{
+
+} */
+
+.navbar ul li{
+    display: inline-block;
+    
+}
+
+.navbar ul li a{
+    font-size: 1.8rem;
+    letter-spacing: 1;
+    padding-right: 1rem;
+    color: white;
+}
+
+.navbar ul li a.active,.navbar ul li a:hover{
+    color: red;
+}
+
+.navbar .other{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .other .search form input[type="text"]{
+    width: ;
+    background: green;
+}
+
+.navbar .other .search form{
+    position: relative;
+}
+
+.navbar .other .search form input[type="text"]::placeholder{
+    color: red;
+}
+
+.navbar .other .search form i{
+    font-size: 1.5rem;
+    color: white;
+    position: absolute
+
+}

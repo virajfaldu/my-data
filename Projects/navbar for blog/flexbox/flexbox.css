@@ -1,0 +1,315 @@
+*
+{
+    margin:0rem;
+    padding:0rem;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    text-transform: capitalize;
+}
+
+html
+{
+    font-size:62.5%;
+}
+body
+{
+    background: #d7e4ed;
+}
+
+.navbar
+{
+    display:flex;
+    height: 60px;
+    width: 100%;
+    background:#24252a;
+    justify-content: space-between;
+    box-shadow:  0 0 5rem #24252a,
+               0 0 .5rem #1a1a1d;
+    transition: .5s;
+}
+
+
+.logo-menu
+{
+    display:flex;
+}
+
+.logo
+{
+    /* background: blue; */
+    align-self: center;
+    font-size:2.4rem;
+    color:white;
+    user-select: none;
+    padding:.5rem;
+}
+
+
+
+.menu
+{
+    /* background: red; */
+    align-self:center;
+    padding: .5rem;
+    margin-left:5.0rem;
+}
+.menu li
+{
+    display: inline-block;
+    padding:1.2rem;
+}
+.menu li a
+{
+    color:white;
+    font-size:2.0rem;
+    padding: .8rem;
+    border: .2rem solid #24252a;
+    border-radius: .6rem;
+    box-shadow: 0 0 .5rem #24252a;
+    transition: .5s;
+
+}
+.menu li a i
+{
+    padding-right:.8rem;
+    color:white;
+}
+.menu li a:hover
+{
+    border: .2rem solid #33ffff;
+    color:  #33ffff;
+    border-radius: .6rem;
+    box-shadow: 0 0 .5rem #33ffff,
+                0 0 .5rem #66ffff;
+}
+
+
+
+.other
+{
+    
+    /* background: red; */
+    display:flex;
+    justify-content: center;
+}
+.search
+{
+    align-self:center;
+    cursor: pointer;
+    padding: 0rem .5rem .4rem .5rem ;
+    border-radius: 10rem;
+}
+.search i
+{
+    
+    color: white;
+    margin-top:.7rem;
+    font-size:2rem;
+    padding:.5rem;
+    border-radius: 100%;
+}
+.search-text
+{
+    border:none;
+    border-radius: 2.0rem;
+    height:3.0rem;
+    padding:.6rem;
+    margin-bottom: .4rem;
+    justify-content: center;
+    line-height: 4rem;
+    width: 20rem;
+    /* display: none; */
+}
+
+
+.user
+{
+    margin-left: 2.0rem;  
+}
+.user img
+{
+    width:90%;
+    height: 90%;
+    border-radius: 100%;
+    align-self: center;
+    margin-top:.2rem;   
+}
+
+
+
+.bar
+{
+    position: absolute;
+    background:black;
+    height: 50px;
+    width:100%;
+    display:none;
+}
+#check
+{
+    display:none;
+}
+label
+{
+    display:none;
+}
+/* --------------------------------responsive division------------------------------------------- */
+
+@media only screen and (max-width: 1130px)
+{
+         .menu
+        {
+            margin-left: 5px; 
+        }
+        .menu li
+        {
+            padding:6px;
+        } 
+        html
+        {
+            font-size:57.5%;
+        }
+}
+
+
+
+@media only screen and (max-width: 1024px)
+{
+        html
+        {
+            font-size:52%;
+        }
+       .search
+       {
+           /* background: red; */
+       }
+        .search form input[type="text"]
+        {  
+            width:80%;
+        }
+        .user
+        {
+            display:none;  
+        }
+}
+
+@media only screen and (max-width: 830px)
+{
+
+    html
+    {
+        font-size:60%
+    }
+    .navbar
+    {
+        height: 100%;;
+        width: 40%;
+        left: -350px;
+        box-shadow:  0 0 5px #24252a,
+                   0 0 5px #1a1a1d;
+        flex-direction: column;
+        position: relative;
+    }
+
+
+
+    .other
+    {
+        align-items: center;
+        width: 100%;
+        background:#faf0f0;
+        height:30%;
+    }
+    .user
+    {
+    
+        display: block;
+        height:15rem;
+        width:15rem;
+    }
+    .user img
+    {
+        border: 1px solid black;
+    }
+
+
+
+    .logo-menu
+    {
+        position: absolute;
+        display:block;
+        order:2;
+        margin-top:25rem;
+        width:100%;
+    }
+    .logo
+    {
+        display: none;
+    }
+    .menu
+    {
+        margin-top:-20px;
+        margin-left: 18px;
+    }
+    .menu li
+    {
+        display: block;
+        line-height: 7rem;
+        
+    }
+    .menu li a
+    {
+        border:none;
+    }
+    .menu li a:hover
+    {
+       border:none;
+       box-shadow: none;
+       font-size: 2.4rem;
+       padding-left:20px;
+    }
+
+
+
+    .search
+    {
+        display: none;
+    }
+
+
+    .bar
+    {
+        display:block;
+    }
+    label
+    {
+        display:block;
+    }
+    label #bar-icon
+    {
+        color:white;
+        position: absolute;
+        cursor: pointer;
+    }
+    label #bar-icon
+    {
+        z-index:11;
+        font-size:3rem;
+        right:10px;
+        top:10px;
+    }
+    #check:checked ~ .navbar
+    {
+        left:0px;
+    }
+    
+}
+
+@media only screen and (max-width: 656px)
+{
+    .navbar
+    {
+        width:50%;
+    }
+}

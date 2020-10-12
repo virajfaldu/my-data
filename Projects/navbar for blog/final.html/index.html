@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.fa-bars').click(function(){
+                $('ul').toggleClass('active');
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div for="check1" class="check-bar">
+            <i class="fa fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <h1>IHJV.<span>Blogs</span></h1>
+        </div>
+
+        <ul class="nav">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"> Home</a></i></li>
+            <li><a href="#"><i class="fa fa-plus" aria-hidden="true"> Add Post</a></i></li>
+            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"> Contact</a></i></li>
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"> My Profile </i> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">My Account</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <input type="checkbox" id="search">
+
+        <label for="search" class="searchicon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </label>
+
+        <div class="searchBox">
+            <form action="">
+                <input type="text" placeholder="search ... ">
+                <input type="submit" value="Search" class="btn">
+            </form>
+        </div>
+
+    </header>
+
+    <h1>Jay Vadhaiya</h1>
+
+</body>
+
+</html>

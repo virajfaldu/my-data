@@ -1,0 +1,253 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background: #d7e4ed;
+}
+
+
+.navbar
+{
+    height: 8%;
+    width: 100%;
+    background : #24252a;
+    position: relative;
+    box-shadow:  0 0 50px #24252a,
+               0 0 5px #1a1a1d;
+
+}
+
+
+.logo
+{
+    position: absolute;
+    color: white;
+    /* background-color:red; */
+    left: 0px;
+    font-size: 50px;
+    line-height: 60px;
+    margin-left: 20px;
+    user-select: none;
+}
+
+
+
+.menu
+{
+    position: absolute;
+    left:12.5%;
+    
+}
+
+
+.menu ul li
+{
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 20px;
+    /* background: blue; */
+}
+.menu ul li a
+{   
+    padding: 9px;
+    color: white;
+    text-decoration: none;
+    transition: .2s;
+    border: 2px solid #24252a;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #24252a,
+                0 0 5px #24252a;
+}
+.menu ul li a i
+{
+    color:white;
+    margin-right: 8px;
+}
+.menu ul li a:hover
+{
+     border: 2px solid #33ffff;
+    color:  #33ffff;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+}
+
+
+
+#check
+{
+    display: none;
+}
+.search
+{
+    /* background: red;  */
+    position: absolute;
+    right:25px;
+    color: white;
+    margin-top: 16px;  
+    width: 18%;
+}
+.search #search1
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+.search #close
+{
+    font-size: 20px;
+    position: absolute;
+    right: 24px;
+    cursor: pointer;
+    display: none;
+}
+.input-type
+{
+    font-size:10px;
+    height: 10%;
+    width: 80%;
+}
+
+
+
+
+#check-bar
+{
+    display: none;
+}
+label #bar
+{
+    font-size: 30px;
+    color: black;
+    /* background-color:red; */
+}
+label #bar-close
+{
+    font-size: 22px;
+    color:white;
+    /* background-color:red; */
+}
+label #bar,label #bar-close
+{
+    display:none;
+}
+
+
+.profile
+{
+    /* background: red; */
+    position: absolute;
+    right:0;
+}
+.profile img
+{
+    border-radius: 100%;
+    float:right;  
+    height: 80%;
+    width: 80%; 
+    margin-top: 8px;   
+}
+
+
+        /* -----------------------part of responsive -------------------- */
+
+@media only screen and (max-width :720px)
+{
+    .navbar
+    {
+        height: 100%;
+        width: 40%;
+        background : white;
+        left:-300px;
+        transition: .5s;
+        box-shadow:  5px 5px 20px #24252a,
+               0 0 5px #1a1a1d;
+    }
+    
+    .search
+    {
+        display:none;
+    }
+    .menu
+    {
+        top:0px;
+        left: 0px;
+        bottom:0px;
+        margin-top: 207px;
+        /* background-color: blue; */
+    }
+    .menu ul li
+    {
+        display: block;
+        line-height: 50px;
+    }
+    .menu ul li a
+    {
+        color:black;
+    }
+    .menu ul li a i
+    {
+        color: #838786;
+    }
+    .menu ul li a:hover
+    {
+       border:none;
+       box-shadow: none;
+       color:black;
+    }
+
+    .profile
+    {
+        position: absolute;
+        left:0px;
+        padding: 40px 0px 60px 80px;
+        background: #24252a;
+    }
+    .profile img
+    {
+        border-radius: 100%;
+        float: none;  
+        height: 100PX;
+        width: 100px;;
+        margin-top: 8px; 
+        
+    }
+    label
+    { 
+        position: absolute;     
+        height: 40px;
+        width: 100%;
+        background-color: #24252a;
+    }
+ 
+    label #bar-close
+    {
+        position: absolute;
+        margin-top:7px;
+        display: block;
+        z-index: 111;
+        left:-36%;
+        transition: .5s;
+    }
+    label #bar
+    {   
+        display: block;
+        color:white;
+        float: right;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+
+    #check-bar:checked ~ .navbar
+    {
+        left: 0px;
+    }
+    #check-bar:checked ~ label #bar-close
+    {
+        left: 36%;
+    }
+    
+    
+} 

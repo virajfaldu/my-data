@@ -1,0 +1,66 @@
+.aboutus,.service,.gallery,.contact{
+    color: black;
+    text-shadow: 2px 3px skyblue;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.aboutus:hover,.service:hover,.gallery:hover,.contact:hover{
+    
+    font-size: 47px;
+}
+
+.img-fluid 
+{
+    border-radius: 20px;
+    border: 2px solid black ;
+}
+.img-fluid:hover
+{
+    height: 102%;  
+}
+.card
+{
+    box-shadow: 2px 2px 4px 3px black;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.card:hover
+{
+    height: 102%;
+    width: 102%;    
+}
+.but
+{
+    background-color: #28a745;  
+    transition-duration: .3s;
+    transition-property: all;
+    margin-left: 20px;
+}
+.but:hover{
+
+    font-size: 19px;
+    background-color:#28a729;  
+}
+.batman
+{
+    margin-top: -30px;
+    position: absolute;
+    height:150px;
+    width: 200px;
+    animation-name: bhag;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes bhag{
+    from{
+        left:0;
+    }
+    to{
+        left:90%;
+    }
+}
+.want-bag
+{
+    background-image: linear-gradient(to left,#f650fe,#607bf5);
+}
