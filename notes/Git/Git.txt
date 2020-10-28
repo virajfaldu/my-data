@@ -1,6 +1,6 @@
  
 
-    git config --user.name "your_name" : for creating a your username
+    git config --user.name "your_name" : for creating a your usernam
  
     git config --user.email "your_email-id" : for creating a your email-Id
 
