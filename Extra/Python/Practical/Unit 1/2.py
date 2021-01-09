@@ -5,4 +5,4 @@ num2= int(input("enter your second number = "))
 
 ans = num1 + num2
 
-print("sum of your two number = ",ans)
+print(f"sum of your two number = {ans}")

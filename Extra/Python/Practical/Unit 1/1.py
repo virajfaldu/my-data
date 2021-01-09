@@ -7,4 +7,4 @@ num2=int(input("enter second number : "))
 
 num1,num2 = num2,num1
 
-print("\nnum1 = ",num1,"num2 = ",num2)
+print(f"num = {num1} num2 = {num2}")
