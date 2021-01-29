@@ -1,0 +1,4 @@
+creating a new user : create user user_name identified by _password;
+creating session    : connect system/user_name
+		       grant connect to user_name
+connection          : connect user_name/_password_	       
