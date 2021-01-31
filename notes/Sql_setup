@@ -1,4 +1,17 @@
 creating a new user : create user user_name identified by _password_;
 creating session    : connect system/user_name
-		       grant connect to user_name
+		      grant connect to user_name;
 connection          : connect user_name/_password_	       
+
+------------for unlock hr user---------------
+
+for unlock hr   : alter user hr account unlock;
+set password    : alter user hr identified by <password>;
+
+then connect with hr user.....
+
+------------for grant all privileges---------------
+
+after create user....
+grant connect to user_name;
+grant all privileges to user_name;
