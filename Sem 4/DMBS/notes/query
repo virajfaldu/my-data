@@ -5,6 +5,9 @@ insert statements..........
 	
 	INSERT INTO table_name
 	VALUES (value1, value2, value3, ...);
+		
+	INSERT all INTO table_name
+	VALUES (value1, value2, value3, ...) select * form dual;
 	
 		
 update statements..........
@@ -25,10 +28,13 @@ select top Clause.....
 	select * from table_name where rownum=<3;
 	display top 3 row from the table	
 
-min() and max().......
+coun() ,min() and max().......
 
 	SELECT MIN(column_name)
 	FROM table_name;
 	
 	SELECT MAX(column_name)
 	FROM table_name;
+
+	select count(column_name) from table_name where condition;
+
