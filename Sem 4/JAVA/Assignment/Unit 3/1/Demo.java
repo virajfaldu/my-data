@@ -1,3 +1,4 @@
+package p;
 import p.packclass;
 class Demo{
 
