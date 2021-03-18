@@ -1,0 +1,30 @@
+
+--------------creating a table------------------------
+
+ create table salespeople(
+ snum number(5) primary key,
+ sname varchar2(10) not null,
+ city varchar2(10),
+ comm number(3,3));
+
+ create table customer(
+ cnum number(5) primary key,
+ cname varchar2(10) not null,
+ city varchar2(10),
+ rating number(4),
+ snum number(5) references salespeople(snum) on delete cascade);
+
+ create table ordr(
+ onum number(5) primary key,
+ amount number(8,2) not null,
+ odate date,
+ cnum number(5) references customer(cnum) on delete cascade,
+ snum number(5) references salespeople(snum) on delete cascade);
+
+ -----------------inserting data------------------------
+ 
+ insert into salespeople values(&snum,'&sname','&city',&comm);
+
+ insert into customer values(&cnum,'&cname','&city',&rating,&sum);
+
+ insert into ordr values(&onum,&amount,'&date',&cnum,&snum);
