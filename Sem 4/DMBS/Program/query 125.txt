@@ -28,3 +28,69 @@
  insert into customer values(&cnum,'&cname','&city',&rating,&sum);
 
  insert into ordr values(&onum,&amount,'&date',&cnum,&snum);
+
+ 20) select snum,max(amount) from ordr where amount>5000 group by snum;
+
+ 21) select odate from ordr where amount=(select max(amount) from ordr);
+
+ 22) select count(odate) from ordr where odate like TO_DATE('03-oct-2020','dd-mon-yyyy');
+
+ 23) select COUNT(city) from customer where city is not null;
+
+ 24) select cnum,min(amount)as min_order from ordr group by cnum order by cnum;
+
+ 25) select min(cname) from customer where cname like 'G%';
+
+ 26) select 'for '|| TO_CHAR(odate,'dd-mm-yy')|| ' there are '||COUNT(onum)||' orders' from ordr group by odate;
+
+ 27) select onum,snum,amount*.12 from ordr;
+
+ 28) select 'For The City '||city||' The Highest Rating Is :'||max(rating) from customer group by city;
+ 
+ 29) select count(onum),odate from ordr group by odate order by count(onum);
+
+ 30) select salespeople.snum,customer.cnum from salespeople,customer where customer.city = salespeople.city;
+
+ 31) select cnum,snum from customer;
+
+ 32) select ordr.onum,customer.cname from customer , ordr where ordr.cnum = customer.cnum;
+
+ 33) select ordr.onum,customer.cname,salespeople.sname from customer,ordr,salespeople where ordr.cnum=customer.cnum and ordr.snum=salespeople.snum order by onum;
+
+ 34) select customer.* from customer,salespeople where customer.snum=salespeople.snum and salespeople.comm>.12;
+ 
+ 35) select ordr.onum,(ordr.amount*salespeople.comm) as commission from 
+     ordr,salespeople,customer where salespeople.snum=ordr.snum and customer.rating>100
+     and customer.snum=ordr.snum;
+
+ 36) select a.cnum ,b.cnum,a.rating from customer a,customer b where a.rating=b.rating and a.cnum!=b.cnum;
+
+ 37) select a.cnum,b.cnum,b.rating from customer a,customer b where a.rating= b.rating and a.cnum!=b.cnum and a.cnum<b.cnum;
+ 
+ 38) select customer.city from customer where customer.snum = (select snum from salespeople where sname like 'Serres');
+
+ 39) select c1.cnum,c2.cnum from customer c1, customer c2 where c1.snum=c2.snum and c1.cnum>c2.cnum;
+
+ 40) select s1.sname,s2.sname from salespeople s1,salespeople s2 where s1.city=s2.city and s1.snum<s2.snum;
+
+ 41) select s1.sname ,s2.sname from salespeople s1,salespeople s2 where s1.snum>s2.snum and s1.city=s2.city;
+
+ 42) select c1.cname,o1.onum,o2.onum from ordr o1,ordr o2,customer c1 where o1.cnum=o2.cnum and o1.onum>o2.onum and c1.cnum=o1.cnum;
+
+ 43) select cname from customer where rating = (select rating from customer where cname like 'Hoffman') and cname not like 'Hoffman';
+
+ 44) select onum from ordr where snum = (select snum from salespeople where sname like 'Motika');
+
+ 45) select onum from ordr where snum = ( select snum from customer where cname = 'Hoffman');
+
+ 46) select onum from ordr where amount > (select avg(amount) from ordr ) and odate = TO_DATE('3-oct-20','dd-mon-yy');
+
+ 47) select avg(comm) from salespeople where city = 'London';
+
+ 48) select onum from ordr where cnum in (select cnum from customer where city like 'London');
+
+ 49) select comm from salespeople where snum in(select snum from customer where city like 'London'); 
+
+ 51) select cnum from customer where rating > (select avg(rating) from customer where city = 'San Jose');
+
+ 52) select ordr.onum from ordr where cnum = (select cnum from customer where cname like 'Clemens');
