@@ -14,3 +14,6 @@ def dashboard(request):
 
 def product(request):
     return render(request,'account/product.html')
+
+def login(request):
+    return render(request,'account/login.html')

@@ -5,4 +5,4 @@ class Employee:
 
 harry = Employee()
 harry.salary = 100000
-harry.getSalary() # Employee.getSalary(harry)
+harry.getSalary() # Employee.getSalary(harry) 
