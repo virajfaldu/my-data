@@ -6,8 +6,13 @@ from django.conf import settings
 
 urlpatterns = [
     path('',views.home,name="home"),
+
     path('signup',views.signup,name="signup"),
     path('login',views.login,name="login"),
+    path('logout',views.logout,name="logout"),
+
+
+    path('showpost/<str:title>/',views.showpost,name="showpost"),
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

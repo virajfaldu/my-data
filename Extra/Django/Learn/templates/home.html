@@ -23,11 +23,11 @@
             {% for card in card_obj%}
                 <div class="col-md-3 mt-5 gap-1">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{card.img.url}}" class="card-img-top" alt="" width="286px" height="181px">
+                        <img src="{{card.img}}" class="card-img-top" alt="" width="286px" height="181px">
                         <div class="card-body">
                             <h5 class="card-title">{{card.title}}</h5>
                             <p class="card-text">{{card.des}}</p>
-                            <a href="" class="btn btn-primary">Go somewhere</a>
+                            <a href="{% url 'showpost' title=card.title %}" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
